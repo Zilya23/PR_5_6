@@ -29,5 +29,12 @@ namespace PR_5_6
             var Prod = new Product();
             this.DataContext = this;
         }
+
+        private void prod_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var n = (sender as ListView).SelectedItem as Product;
+
+            NavigationService.Navigate(new BuyPage(n));
+        }
     }
 }
