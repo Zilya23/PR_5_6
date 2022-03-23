@@ -28,6 +28,17 @@ namespace PR_5_6
             products = new ObservableCollection<Product>(bd_connection.aAAAEntities.Product.ToList());
             var Prod = new Product();
             this.DataContext = this;
+            HashSet<string> proiz = new HashSet<string>();
+
+            foreach (var i in products)
+            {
+                proiz.Add(i.Proizvoditel);
+            }
+
+            foreach (var i in proiz)
+            {
+                cb_Proizvod.Items.Add(i);
+            }
         }
 
         private void prod_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -43,9 +54,25 @@ namespace PR_5_6
             {
                 prod.SelectedItem = null;
                 prod.ItemsSource = new ObservableCollection<Product>(bd_connection.aAAAEntities.Product.Where(z => (z.Name.Contains(tb_Poisk.Text) || z.Opisanie.Contains(tb_Poisk.Text))).ToList());
-
-
             }
+        }
+
+        private void cb_Proizvod_Selected(object sender, RoutedEventArgs e)
+        {
+            prod.SelectedItem = null;
+            prod.ItemsSource = new ObservableCollection<Product>(bd_connection.aAAAEntities.Product.Where(z => (z.Proizvoditel.Contains((cb_Proizvod.SelectedItem).ToString()))).ToList());
+        }
+
+        private void btn_Filtr_Click(object sender, RoutedEventArgs e)
+        {
+            //SortedSet<string> proiz = new SortedSet<string>();
+            //btn_Filtr.Content = "По возрастанию";
+            //foreach(var i in products)
+            //{
+            //    proiz.Add(i.Proizvoditel);
+            //}
+            //prod.SelectedItem = null;
+            //prod.ItemsSource = proiz;
         }
     }
 }
