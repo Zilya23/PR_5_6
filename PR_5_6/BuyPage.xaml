@@ -18,18 +18,33 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btn_back" Content="Назад" Grid.Row="0" Width="80" Height="20" HorizontalAlignment="Left" Click="btn_back_Click"/>
-        <TextBlock x:Name="tb_Name" Grid.Row="1" FontSize="20"/>
+
+        <Button x:Name="btn_plus" Content="+" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Width="35" Height="35" FontSize="20" Click="btn_plus_Click"/>
+        <Button x:Name="btn_minus" Content="-" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Width="35" Height="35" FontSize="20" Click="btn_minus_Click"/>
+        <TextBlock x:Name="tb_Kol" Grid.Row="2" Width="100" Height="30" Grid.Column="1" Grid.ColumnSpan="2" Text="0" FontSize="20"/>
+
+        <TextBlock x:Name="tb_Name" Grid.Row="1" FontSize="20" Grid.Column="0"/>
         <TextBlock Text="Количество" Grid.Column="0" Grid.Row="2" FontSize="18" VerticalAlignment="Center"/>
-        <TextBox x:Name="tb_Kol" Grid.Row="2" Width="150" Height="30"/>
-        <TextBlock Text="Вид оплаты:" FontSize="18" Grid.Row="3" VerticalAlignment="Center"/>
-        <ComboBox Name="cb_VidOplaty" Grid.Row="3" Width="180" Height="30"/>
-        <TextBlock Text="Способ получения:" FontSize="18" Grid.Row="4" VerticalAlignment="Center"/>
-        <ComboBox Name="cb_Poluch" Grid.Row="4" Width="180" Height="30" HorizontalAlignment="Right" Margin="0, 0, 50, 0"/>
+        <TextBlock Text="Вид оплаты:" FontSize="18" Grid.Row="3" VerticalAlignment="Center" Grid.Column="0"/>
+        <TextBlock Text="Способ получения:" FontSize="18" Grid.Row="4" VerticalAlignment="Center" Grid.Column="0"/>
+        <TextBlock Text="ФИО" Grid.Column="0" Grid.Row="5" FontSize="18" VerticalAlignment="Center"/>
+        <TextBlock Text="Телефон" Grid.Column="0" Grid.Row="6" FontSize="18" VerticalAlignment="Center"/>
+        <TextBlock Text="Адрес доставки" Name="tb_Adres" Grid.Column="0" Grid.Row="7" FontSize="18" VerticalAlignment="Center" Visibility="Hidden"/>
+
+        <ComboBox Name="cb_Poluch" Grid.Row="4" Width="300" Height="30" HorizontalAlignment="Right" Margin="0, 0, 50, 0" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="cb_Poluch_SelectionChanged"/>
+        <TextBox x:Name="tb_FIO" Grid.Row="5" Width="300" Height="30" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox Name="cb_VidOplaty" Grid.Row="3" Width="300" Height="30" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tb_Tel" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="30"/>
+        <TextBox x:Name="tb_Adr" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="30" Visibility="Hidden"/>
+
     </Grid>
 </Page>

@@ -29,27 +29,14 @@
         <ComboBox Name="cb_Proizvod" Grid.Column="1" Grid.Row="0" SelectionChanged="cb_Proizvod_Selected"/>
         <TextBox x:Name="tb_Poisk" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="5" SelectionChanged="tb_Poisk_SelectionChanged"/>
 
-        <ListView x:Name="prod" ItemsSource="{Binding products}" Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="6" SelectionChanged="prod_SelectionChanged">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Vertical">
-
-                        <TextBlock>
-                            <TextBlock.Text>
-                                <MultiBinding StringFormat="{} {0} {1}">
-                                    <Binding Path="Product.Name"/>
-                                    <Binding Path="Name"/>
-                                    <Binding Path="Product.Opisanie"/>
-                                    <Binding Path="Opisanie"/>
-                                </MultiBinding>
-                            </TextBlock.Text>
-                            
-                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Foreground="Black" FontSize="20"/>
-                            <TextBlock Text="{Binding Opisanie}" HorizontalAlignment="Center" Foreground="Black" FontSize="12"/>
-                        </TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+        <ListView Name="prod" ItemsSource="{Binding products}" Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="6" SelectionChanged="prod_SelectionChanged" Foreground="Black">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="150">Название</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Opisanie}" Width="250">Описание</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Kolichestvo}">Количество</GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
     </Grid>
 </Page>

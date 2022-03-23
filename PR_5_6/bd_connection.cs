@@ -8,6 +8,6 @@ namespace PR_5_6
 {
     class bd_connection
     {
-        public static AAAAEntities1 aAAAEntities = new AAAAEntities1();
+        public static AAAAEntities2 aAAAEntities = new AAAAEntities2();
     }
 }

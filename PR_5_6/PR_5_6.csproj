@@ -96,21 +96,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="bd_connection.cs" />
-    <Compile Include="bd_Product.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bd_Product.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="bd_Product.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bd_Product.tt</DependentUpon>
-    </Compile>
-    <Compile Include="bd_Product.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bd_Product.edmx</DependentUpon>
-    </Compile>
     <Compile Include="BuyPage.xaml.cs">
       <DependentUpon>BuyPage.xaml</DependentUpon>
     </Compile>
@@ -124,7 +109,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Product.cs">
-      <DependentUpon>bd_Product.tt</DependentUpon>
+      <DependentUpon>Prod_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prod_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prod_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prod_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prod_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prod_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prod_Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -143,14 +143,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="bd_Product.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>bd_Product.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="bd_Product.edmx.diagram">
-      <DependentUpon>bd_Product.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="Prod_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Prod_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Prod_Model.edmx.diagram">
+      <DependentUpon>Prod_Model.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,15 +175,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bd_Product.Context.tt">
+    <Content Include="Prod_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>bd_Product.edmx</DependentUpon>
-      <LastGenOutput>bd_Product.Context.cs</LastGenOutput>
+      <DependentUpon>Prod_Model.edmx</DependentUpon>
+      <LastGenOutput>Prod_Model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="bd_Product.tt">
+    <Content Include="Prod_Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>bd_Product.edmx</DependentUpon>
-      <LastGenOutput>bd_Product.cs</LastGenOutput>
+      <DependentUpon>Prod_Model.edmx</DependentUpon>
+      <LastGenOutput>Prod_Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

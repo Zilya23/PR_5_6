@@ -65,14 +65,15 @@ namespace PR_5_6
 
         private void btn_Filtr_Click(object sender, RoutedEventArgs e)
         {
-            //SortedSet<string> proiz = new SortedSet<string>();
+            //List<string> produ = new List<string>();
             //btn_Filtr.Content = "По возрастанию";
-            //foreach(var i in products)
+            //foreach (var i in products)
             //{
-            //    proiz.Add(i.Proizvoditel);
+            //    prod = i.ID;
             //}
+
             //prod.SelectedItem = null;
-            //prod.ItemsSource = proiz;
+            //prod.ItemsSource = new ObservableCollection<Product>(bd_connection.aAAAEntities.Product.Where(z => (z.Stoimost.HasValue))).ToList());
         }
     }
 }
