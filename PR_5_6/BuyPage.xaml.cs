@@ -29,6 +29,10 @@ namespace PR_5_6
             cb_VidOplaty.Items.Add("Банковская карта");
             cb_VidOplaty.Items.Add("Google Pay");
             cb_VidOplaty.Items.Add("Apple Pay");
+
+            cb_Poluch.Items.Add("Самовывоз");
+            cb_Poluch.Items.Add("Доставка");
+            cb_Poluch.Items.Add("Срочная доставка");
         }
 
         private void btn_back_Click(object sender, RoutedEventArgs e)

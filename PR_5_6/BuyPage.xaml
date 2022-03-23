@@ -29,5 +29,7 @@
         <TextBox x:Name="tb_Kol" Grid.Row="2" Width="150" Height="30"/>
         <TextBlock Text="Вид оплаты:" FontSize="18" Grid.Row="3" VerticalAlignment="Center"/>
         <ComboBox Name="cb_VidOplaty" Grid.Row="3" Width="180" Height="30"/>
+        <TextBlock Text="Способ получения:" FontSize="18" Grid.Row="4" VerticalAlignment="Center"/>
+        <ComboBox Name="cb_Poluch" Grid.Row="4" Width="180" Height="30" HorizontalAlignment="Right" Margin="0, 0, 50, 0"/>
     </Grid>
 </Page>
