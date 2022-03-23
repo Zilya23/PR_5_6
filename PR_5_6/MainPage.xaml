@@ -27,7 +27,7 @@
 
         <Button x:Name="btn_Filtr" Content="По убыванию" Grid.Column="0" Grid.Row="0"/>
         <Button x:Name="btn_Proizvod" Content="Производитель" Grid.Column="1" Grid.Row="0"/>
-        <TextBox x:Name="tb_Poisk" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="5"/>
+        <TextBox x:Name="tb_Poisk" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="5" SelectionChanged="tb_Poisk_SelectionChanged"/>
 
         <ListView x:Name="prod" ItemsSource="{Binding products}" Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="6" SelectionChanged="prod_SelectionChanged">
             <ListView.ItemTemplate>

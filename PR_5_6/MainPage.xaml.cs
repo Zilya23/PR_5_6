@@ -36,5 +36,16 @@ namespace PR_5_6
 
             NavigationService.Navigate(new BuyPage(n));
         }
+
+        private void tb_Poisk_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (tb_Poisk.Text != "")
+            {
+                prod.SelectedItem = null;
+                prod.ItemsSource = new ObservableCollection<Product>(bd_connection.aAAAEntities.Product.Where(z => (z.Name.Contains(tb_Poisk.Text) || z.Opisanie.Contains(tb_Poisk.Text))).ToList());
+
+
+            }
+        }
     }
 }
