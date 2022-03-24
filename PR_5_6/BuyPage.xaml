@@ -27,6 +27,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btn_back" Content="Назад" Grid.Row="0" Width="80" Height="20" HorizontalAlignment="Left" Click="btn_back_Click"/>
+        <Button x:Name="btn_buy" Content="Купить" Grid.Row="0" Grid.Column="6" Width="80" Height="20" HorizontalAlignment="Right" Click="btn_buy_Click"/>
 
         <Button x:Name="btn_plus" Content="+" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Width="35" Height="35" FontSize="20" Click="btn_plus_Click"/>
         <Button x:Name="btn_minus" Content="-" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Width="35" Height="35" FontSize="20" Click="btn_minus_Click"/>
@@ -40,10 +41,10 @@
         <TextBlock Text="Телефон" Grid.Column="0" Grid.Row="6" FontSize="18" VerticalAlignment="Center"/>
         <TextBlock Text="Адрес доставки" Name="tb_Adres" Grid.Column="0" Grid.Row="7" FontSize="18" VerticalAlignment="Center" Visibility="Hidden"/>
 
-        <ComboBox Name="cb_Poluch" Grid.Row="4" Width="300" Height="30" HorizontalAlignment="Right" Margin="0, 0, 50, 0" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="cb_Poluch_SelectionChanged"/>
+        <ComboBox Name="cb_Poluch" Grid.Row="4" Width="300" Height="30" HorizontalAlignment="Right" Margin="0, 0, 50, 0" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="cb_Poluch_SelectionChanged" SelectedIndex="0"/>
         <TextBox x:Name="tb_FIO" Grid.Row="5" Width="300" Height="30" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <ComboBox Name="cb_VidOplaty" Grid.Row="3" Width="300" Height="30" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tb_Tel" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="30"/>
+        <ComboBox Name="cb_VidOplaty" Grid.Row="3" Width="300" Height="30" Grid.Column="1" Grid.ColumnSpan="2" SelectedIndex="0"/>
+        <TextBox x:Name="tb_Tel" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="30" PreviewTextInput="tb_Tel_TextInput"/>
         <TextBox x:Name="tb_Adr" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Width="300" Height="30" Visibility="Hidden"/>
 
     </Grid>
