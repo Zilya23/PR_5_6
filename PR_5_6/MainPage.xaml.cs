@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace PR_5_6
 {
@@ -65,15 +66,19 @@ namespace PR_5_6
 
         private void btn_Filtr_Click(object sender, RoutedEventArgs e)
         {
-            //List<string> produ = new List<string>();
-            //btn_Filtr.Content = "По возрастанию";
-            //foreach (var i in products)
-            //{
-            //    prod = i.ID;
-            //}
-
-            //prod.SelectedItem = null;
-            //prod.ItemsSource = new ObservableCollection<Product>(bd_connection.aAAAEntities.Product.Where(z => (z.Stoimost.HasValue))).ToList());
+            if(Convert.ToString(btn_Filtr.Content) == "По убыванию")
+            {
+                prod.ItemsSource = products.OrderBy(x => x.Stoimost).ToList();
+                var temp = products.OrderBy(x => x.Stoimost).ToList();
+                temp.Reverse();
+                prod.ItemsSource = temp;
+                btn_Filtr.Content = "По возрастанию";
+            }
+            else if (Convert.ToString(btn_Filtr.Content) == "По возрастанию")
+            {
+                prod.ItemsSource = products.OrderBy(x => x.Stoimost).ToList();
+                btn_Filtr.Content = "По убыванию";
+            }
         }
     }
 }

@@ -42,7 +42,7 @@ namespace PR_5_6
 
         private void btn_back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new MainPage());
         }
 
         private void cb_Poluch_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -80,7 +80,7 @@ namespace PR_5_6
             if (Convert.ToInt32(tb_Kol.Text) != 0 && tb_FIO.Text != "" && tb_Tel.Text.Length == 11 && tb_Adres.Text != "")
             {
                 MessageBox.Show("ОК");
-                NavigationService.GoBack();
+                NavigationService.Navigate(new MainPage());
             }
             else
             {
