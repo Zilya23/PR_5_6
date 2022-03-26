@@ -37,7 +37,7 @@ namespace PR_5_6
             cb_Poluch.Items.Add("Доставка");
             cb_Poluch.Items.Add("Срочная доставка");
 
-            tb_Adres.Text = "Самовывоз";
+            tb_Adr.Text = "Самовывоз";
         }
 
         private void btn_back_Click(object sender, RoutedEventArgs e)
@@ -49,9 +49,15 @@ namespace PR_5_6
         {
             if(cb_Poluch.SelectedItem.ToString() != "Самовывоз")
             {
-                tb_Adres.Text = "";
-                tb_Adr.Visibility = Visibility;
-                tb_Adres.Visibility = Visibility;
+                tb_Adr.Text = "";
+                tb_Adr.Visibility = Visibility.Visible;
+                tb_Adres.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                tb_Adr.Text = " ";
+                tb_Adr.Visibility = Visibility.Hidden;
+                tb_Adres.Visibility = Visibility.Hidden;
             }
         }
 
@@ -77,7 +83,7 @@ namespace PR_5_6
 
         private void btn_buy_Click(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToInt32(tb_Kol.Text) != 0 && tb_FIO.Text != "" && tb_Tel.Text.Length == 11 && tb_Adres.Text != "")
+            if (Convert.ToInt32(tb_Kol.Text) != 0 && tb_FIO.Text != "" && tb_Tel.Text.Length == 11 && tb_Adr.Text != " ")
             {
                 MessageBox.Show("ОК");
                 NavigationService.Navigate(new MainPage());

@@ -37,7 +37,7 @@
           <Property Name="Nalichie" Type="Boolean" />
           <Property Name="Kolichestvo" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="AAAAEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AAAAEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Product" EntityType="Self.Product" />
         </EntityContainer>
       </Schema>
@@ -45,7 +45,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище AAAAModelContainer" CdmEntityContainer="AAAAEntities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище AAAAModelContainer" CdmEntityContainer="AAAAEntities3">
           <EntitySetMapping Name="Product">
             <EntityTypeMapping TypeName="AAAAModel.Product">
               <MappingFragment StoreEntitySet="Product">

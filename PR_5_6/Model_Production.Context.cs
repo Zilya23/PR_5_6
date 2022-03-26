@@ -13,10 +13,10 @@ namespace PR_5_6
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AAAAEntities2 : DbContext
+    public partial class AAAAEntities3 : DbContext
     {
-        public AAAAEntities2()
-            : base("name=AAAAEntities2")
+        public AAAAEntities3()
+            : base("name=AAAAEntities3")
         {
         }
     

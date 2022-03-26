@@ -39,7 +39,7 @@
         <TextBlock Text="Способ получения:" FontSize="18" Grid.Row="4" VerticalAlignment="Center" Grid.Column="0"/>
         <TextBlock Text="ФИО" Grid.Column="0" Grid.Row="5" FontSize="18" VerticalAlignment="Center"/>
         <TextBlock Text="Телефон" Grid.Column="0" Grid.Row="6" FontSize="18" VerticalAlignment="Center"/>
-        <TextBlock Text="Адрес доставки" Name="tb_Adres" Grid.Column="0" Grid.Row="7" FontSize="18" VerticalAlignment="Center" Visibility="Hidden"/>
+        <TextBlock Text="Адрес доставки" Grid.Column="0" Grid.Row="7" Name="tb_Adres" FontSize="18"  Visibility="Hidden"/>
 
         <ComboBox Name="cb_Poluch" Grid.Row="4" Width="300" Height="30" HorizontalAlignment="Right" Margin="0, 0, 50, 0" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="cb_Poluch_SelectionChanged" SelectedIndex="0"/>
         <TextBox x:Name="tb_FIO" Grid.Row="5" Width="300" Height="30" Grid.Column="1" Grid.ColumnSpan="2"/>
